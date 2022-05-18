@@ -3,7 +3,7 @@ defmodule Ulid.MixProject do
 
   def project do
     [
-      app: :ulid,
+      app: :ulidex,
       version: "0.1.0",
       elixir: "~> 1.13",
       elixirc_paths: elixirc_paths(Mix.env()),
