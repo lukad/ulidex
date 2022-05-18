@@ -10,7 +10,14 @@ defmodule Ulid.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "ulidex",
-      source_url: "https://github.com/lukad/ulidex"
+      description: "Generate ULIDs",
+      source_url: "https://github.com/lukad/ulidex",
+      package: %{
+        licenses: ["MIT"],
+        links: %{
+          "GitHub" => "https://github.com/lukad/ulidex"
+        }
+      }
     ]
   end
 
