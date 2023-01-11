@@ -1,4 +1,4 @@
-defmodule Ulid.UlidCase do
+defmodule Ulidex.UlidCase do
   @moduledoc false
   use ExUnit.CaseTemplate
 

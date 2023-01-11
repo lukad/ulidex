@@ -1,9 +1,9 @@
-defmodule Ulid.Binary do
+defmodule Ulidex.Binary do
   @moduledoc """
   Generates binary ULIDs.
   """
 
-  alias Ulid.Rand
+  alias Ulidex.Rand
 
   @typedoc """
   A 128 bit ULID consisting of:
@@ -17,7 +17,7 @@ defmodule Ulid.Binary do
 
   ## Examples
 
-      iex> ulid = Ulid.Binary.generate()
+      iex> ulid = Ulidex.Binary.generate()
       iex> <<_::size(128)>> = ulid
 
   """

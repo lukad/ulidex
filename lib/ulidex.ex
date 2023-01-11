@@ -1,9 +1,9 @@
-defmodule Ulid do
+defmodule Ulidex do
   @moduledoc """
   This is an implementation of the ULID (Universally Unique Lexicographically Sortable Identifier) spec.
   """
 
-  alias Ulid.Binary
+  alias Ulidex.Binary
 
   @typedoc """
   A Crockford 32 encoded ULID.
@@ -17,7 +17,7 @@ defmodule Ulid do
 
   ## Examples
 
-      iex> ulid = Ulid.generate()
+      iex> ulid = Ulidex.generate()
       iex> <<_::size(208)>> = ulid
   """
   @spec generate(integer()) :: binary()
@@ -30,11 +30,11 @@ defmodule Ulid do
   @doc """
   Takes a 128 bit binary ULID and returns a Crockford 32 encoded ULID.
 
-  Raises `Ulid.Error.InvalidBinary` when the input is malformed.
+  Raises `Ulidex.Error.InvalidBinary` when the input is malformed.
 
   ## Examples
       iex> ulid = <<1, 128, 211, 67, 45, 254, 115, 142, 105, 252, 121, 217, 228, 222, 219, 155>>
-      iex> Ulid.encode(ulid)
+      iex> Ulidex.encode(ulid)
       "01G39M6BFYEE76KZ3SV7JDXPWV"
   """
   @spec encode(Binary.t()) :: t()
@@ -47,17 +47,17 @@ defmodule Ulid do
     to_string(encoded)
   end
 
-  def encode(_), do: raise(Ulid.Error.InvalidBinary, "Must be a 128 bit binary")
+  def encode(_), do: raise(Ulidex.Error.InvalidBinary, "Must be a 128 bit binary")
 
   @doc """
   Takes a Crockford 32 encoded ULID and returns a a 128 bit binary ULID.
 
-  Raises `Ulid.Error.InvalidUlidString` when the input is malformed.
+  Raises `Ulidex.Error.InvalidUlidString` when the input is malformed.
 
   ## Examples
 
       iex> ulid = "01G3C1TW8AKE19BYDDR6996C1D"
-      iex> Ulid.decode(ulid)
+      iex> Ulidex.decode(ulid)
       <<1, 128, 216, 29, 113, 10, 155, 130, 149, 249, 173, 193, 146, 147, 48, 45>>
   """
   @spec decode(t()) :: Binary.t()
@@ -73,7 +73,7 @@ defmodule Ulid do
     decoded
   end
 
-  def decode(string), do: raise(Ulid.Error.InvalidUlidString, string)
+  def decode(string), do: raise(Ulidex.Error.InvalidUlidString, string)
 
   defp encode_symbol(0), do: ?0
   defp encode_symbol(1), do: ?1

@@ -1,4 +1,4 @@
-defmodule Ulid.TestRand do
+defmodule Ulidex.TestRand do
   @moduledoc false
   @spec bytes(pos_integer()) :: binary()
   def bytes(size) do

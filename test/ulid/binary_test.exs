@@ -1,11 +1,11 @@
-defmodule Ulid.BinaryTest do
+defmodule Ulidex.BinaryTest do
   @moduledoc false
-  use Ulid.UlidCase, async: true
-  doctest Ulid.Binary
+  use Ulidex.UlidCase, async: true
+  doctest Ulidex.Binary
 
-  describe "Ulid.Binary.generate/1" do
+  describe "Ulidex.Binary.generate/1" do
     test "generates a 128 bit id" do
-      assert <<_::size(128)>> = Ulid.Binary.generate()
+      assert <<_::size(128)>> = Ulidex.Binary.generate()
     end
   end
 end

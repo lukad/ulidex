@@ -1,4 +1,4 @@
-defmodule Ulid.Error do
+defmodule Ulidex.Error do
   @moduledoc false
 
   defmodule InvalidBinary do

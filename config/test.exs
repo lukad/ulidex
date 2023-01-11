@@ -1,4 +1,4 @@
 import Config
 
-config :ulid,
-  rand_bytes: &Ulid.TestRand.bytes/1
+config :ulidex,
+  rand_bytes: &Ulidex.TestRand.bytes/1
