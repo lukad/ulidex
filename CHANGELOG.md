@@ -1,6 +1,17 @@
 Change Log
 ==========
 
+[0.2.1] - 2023-01-11
+---------------------
+
+### Added
+
+### Changed
+
+### Fixed
+
+* a default random source is now specified when fetchthing it from the application environment
+
 [0.2.0] - 2023-01-11
 ---------------------
 
